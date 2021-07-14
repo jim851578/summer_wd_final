@@ -1,0 +1,20 @@
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(222, 229, 236);
+
+  }
+
+  .topNav {
+      background-image: url(./images/Quail\ vector.jpg);
+  }
+
+ .productInfo {
+     display: flex;
+     flex-direction: column;
+ }   
+
+ #reviews   {
+     margin: 20px;
+     text-align: left;
+ }
