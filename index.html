@@ -9,18 +9,69 @@
 </head>
 <body>
     <div class="topnav">
-        <a href="./multipleItems.html">Home</a>
-        <a href="./contact.html">Contact</a>
-        <a href="./about.html">About</a>
-      </div>
+        <button onclick="window.location.href='./multipleItems.html';">Multiple Items Page</button>
+        <button onclick="window.location.href='./contact.html';">Contact</button>
+        <button onclick="window.location.href='./about';">About</button>
+
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn">Shopping Cart</button>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Shopping Cart</p>
+        <div>
+            <table border="1px">
+                <tr>
+                    <td>Item Name</td>
+                    <td>Price</td>
+                    <td>Count</td>
+                </tr>
+
+                <tr>
+                    <td><div><img src="./images/RasPi4.jpg" alt="small RasPi4" width=100px height="auto"></div> Raspberry Pi 4 8GB RAM</td>
+                    <td>$45.00</td>
+                    <td>
+                        <div id="countContainer">
+                            <div>
+                                <input type="text" id="number" value="1" maxlength="2" size="2"> 
+                            </div>
+                            <div>
+                                <div>
+                                    <input type="image" id="increaseArrow" src="./images/green up.jpg" width="50px" height="auto" onclick="incrementValue()" value="Increment Value">
+                                </div>
+                                
+                                <div>
+                                    <input type="image" id="increaseArrow" src="./images/green down.jpg" width="50px" height="auto" onclick="decrementValue()" value="Decrement Value">
+                                </div>
+                            </div>     
+                        </div>
+                       
+                        
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+            </table>
+        </div>
+  </div>
+</div>
 
 
       
     <div class="flex-container">
         <div>
             <img src="./images/RasPi4.jpg" alt="Raspberry Pi 4 8GB RAM" width="500px" height=auto>
-            <button id="addToCartButton" >Add to Cart</button>
-            <input id="reviewButton" type="button" onClick="document.getElementById('reviews').scrollIntoView();" value="Review"/> 
+            <button id="addToCartButton" onclick="incrementValue()" value="Increment Value">Add to Cart</button>
+            <input id="reviewButton" type="button" onClick="document.getElementById('reviews').scrollIntoView();" value="Reviews"/> 
             
             
         </div>
@@ -28,7 +79,7 @@
 
         <div>
             <h1>Raspberry PI 4 8GB RAM</h1>
-            <h2>Price $45</h2>
+            <h2>Price $45.00</h2>
             <p>The Raspberry Pi 4 Model B is the newest Raspberry Pi computer made,
                 and the Pi Foundation knows you can always make a good thing better!
                 And what could make the Pi 4 better than the 3?
